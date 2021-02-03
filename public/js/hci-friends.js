@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 $(document).ready(function(e) {
 	$('a').click(projectClick);
-  });
+  })
 
 
 
@@ -19,10 +19,9 @@ function initializePage() {
 }
 
 function projectClick(e) {
-	console.log("name is", $(this).text());
+	console.log("name is", $(this).text().trim());
 	e.preventDefault();
-	var newText = anagrammedName($(this).text());
-	console.log(newText);
+	var newText = anagrammedName($(this).text().trim());
 	$(this).text(newText);
 }
 
